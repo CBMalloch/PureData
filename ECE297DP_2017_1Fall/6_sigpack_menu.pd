@@ -1,0 +1,15 @@
+#N canvas 267 390 450 300 10;
+#X obj 57 131 freqshift~;
+#X obj 57 45 decimate~;
+#X obj 97 20 chop~;
+#X obj 97 66 diode~;
+#X obj 97 88 foldback~;
+#X obj 57 110 freqdiv~;
+#X obj 56 154 harmgen~;
+#X obj 98 178 rectify~;
+#X obj 59 202 round~;
+#X obj 299 23 saturate~;
+#X obj 299 46 sieve~;
+#X obj 300 70 split~;
+#X obj 300 92 ustep~;
+#X obj 265 116 vowel~;

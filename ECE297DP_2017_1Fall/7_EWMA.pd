@@ -1,0 +1,54 @@
+#N canvas 598 157 801 513 10;
+#X obj 39 36 openpanel;
+#X obj 31 -1 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 243 readsf~;
+#X msg 32 164 open \$1;
+#X obj 594 393 output~;
+#X msg 67 203 start;
+#X obj 53 283 throw~ input;
+#X obj 361 35 catch~ input;
+#X obj 458 342 throw~ sound;
+#X text 43 16 wave \, aiff \, or nextstep formats!;
+#X symbolatom 29 115 40 0 0 0 - - -, f 40;
+#X obj 13 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 529 114 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8000 1;
+#X obj 487 155 * -1;
+#X obj 491 184 + 1;
+#X floatatom 499 219 5 0 0 0 - - -, f 5;
+#X obj 445 229 *~;
+#X obj 588 252 *~;
+#X obj 507 276 +~;
+#X text 533 88 fader;
+#X obj 217 189 catch~ sound;
+#X obj 217 217 delwrite~ d1 1000;
+#X obj 210 289 vd~ d1 5;
+#X obj 210 318 throw~ delayed;
+#X obj 607 186 catch~ delayed;
+#X obj 214 258 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 200 1;
+#X connect 0 0 10 0;
+#X connect 1 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 3 0 5 0;
+#X connect 5 0 2 0;
+#X connect 7 0 16 0;
+#X connect 10 0 3 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 0 16 1;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 18 0 8 0;
+#X connect 18 0 4 0;
+#X connect 18 0 4 1;
+#X connect 20 0 21 0;
+#X connect 22 0 23 0;
+#X connect 24 0 17 1;
+#X connect 25 0 22 0;
